@@ -4,7 +4,7 @@ from integration import integrate_average
 class TestIntegration(unittest.TestCase):
     
     def test_constant_function(self):
-        f = 5
+        f = lambda x: 5
         result = integrate_average(f, 0, 10)
         expected = 5
         self.assertAlmostEqual(result, expected, places=5)
