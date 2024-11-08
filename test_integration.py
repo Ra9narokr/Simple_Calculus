@@ -12,8 +12,9 @@ class TestIntegration(unittest.TestCase):
     def test_polynomial_function(self):
         f = lambda x: x**2 + x + 1
         result = integrate_average(f, 0, 1)
-        expected = (1/4 + 1/2 + 1)
-        self.assertAlmostEqual(result, expected, places=5)
+        fault_ans = 1.75
+        correct_ans = 1.8333333333333335
+        self.assertAlmostEqual(result, correct_ans, places=5)
 
 if __name__ == "__main__":
     unittest.main()
